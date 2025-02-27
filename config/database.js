@@ -8,3 +8,5 @@ module.exports.connect = async () => {
         console.log('Connect error');
     }
 }
+
+//Kết nối databse ở đây
