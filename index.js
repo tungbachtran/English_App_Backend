@@ -6,7 +6,7 @@ const database = require('./config/database');
 const route = require("./routes/index.route");
 const app = express();
 const port = process.env.PORT ;
-app.use(express.static("/public"));
+app.use(express.static(`${__dirname}/public`));
 database.connect();
 
 
