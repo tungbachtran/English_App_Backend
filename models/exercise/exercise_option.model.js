@@ -3,7 +3,7 @@ const Exercise = require('./exercise.model');
 // Định nghĩa schema cho ChallengeOption
 const exerciseOptionSchema = new mongoose.Schema({
   exerciseId: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: String,
     ref: 'exercises',
     required: true,
     default: null
@@ -33,7 +33,16 @@ const exerciseOptionSchema = new mongoose.Schema({
   order: {
     type: Number,
     default: null 
-  }
+  },
+  acceptedAnswer: {
+    type: Array,
+    default: null, 
+  },
+  translateWord: {
+    type: String,
+    default: null, 
+  },
+  
 }, {
   timestamps: true
 });
